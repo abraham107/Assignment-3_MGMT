@@ -654,3 +654,48 @@ if ( ! function_exists( 'wp_get_list_item_separator' ) ) :
 		return __( ', ', 'twentytwentyone' );
 	}
 endif;
+
+// custom theme post
+function scouting_team_post_type() 
+{
+	$labels = array(
+		'name' => __('Team', 'textdomain'),
+		'team_name' => __('Team', 'textdomain'),
+		'new_team' => __('New Team', 'textdomain'),
+		'edit_team' => __('Edit Team', 'textdomain'),
+		'view_team' => __('View Team', 'textdomain'),
+		'all_teams' => __('All Teams', 'textdomain'),
+		'delete_team' => __('Delete Team', 'textdomain'),
+	);
+
+	$args = array(
+
+		'label' => $labels,
+		'public' => true,
+		'show-ui' => true,
+		'capability-type' => 'post',
+		'hierarchical' => false,
+		'query-var' => true,
+		'menu-icon' => 'dashicons-universal-access',
+		'supports' => array(
+			'title',
+			'editor',
+			'excerpts',
+			'trackbacks',
+			'custom-fields',
+			'comments',
+			'revisions',
+			'thumbnail',
+			'author',
+			'post-formats',
+			'page-attributes',
+		)
+	);
+	register_post_type('team', $args);
+
+	add_action('init', 'register_team_post_type');
+
+
+
+}
+
