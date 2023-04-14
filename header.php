@@ -22,6 +22,13 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<!-- Logo -->
+<div class="site-logo">
+  <a href="<?php echo esc_url( home_url( 'Main-Project\assets\images\logo.jpg' ) ); ?>" rel="home">
+    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+  </a>
+</div>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'twentytwentyone' ); ?></a>
 

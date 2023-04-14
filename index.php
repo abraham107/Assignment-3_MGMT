@@ -33,7 +33,7 @@ if ( have_posts() ) {
 	}
 
 	// Previous/next page navigation.
-	twenty_twenty_one_the_posts_navigation();
+	<?php wp_nav_menu( array( '"C:\Users\Abraham\Dropbox\PC\Desktop\wordpress\wp-content\themes\Main-Project"' => 'Navigation' ) ); ?>
 
 } else {
 

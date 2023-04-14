@@ -53,7 +53,7 @@
 					<?php endif; ?>
 				<?php endif; ?>
 			</div><!-- .site-name -->
-
+			
 			<?php
 			if ( function_exists( 'the_privacy_policy_link' ) ) {
 				the_privacy_policy_link( '<div class="privacy-policy">', '</div>' );
@@ -74,7 +74,9 @@
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->
-
+<footer>
+    <p>&copy; Abraham Samuel, 200491120</p>
+</footer>
 <?php wp_footer(); ?>
 
 </body>
